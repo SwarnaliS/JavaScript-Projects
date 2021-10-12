@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Project3</title>
+    <meta charset="utf-8">
+    <script src="./JS/main.js"></script>
+</head>
+<html>
+    <body>
+        <!--Addition-->
+        <p id="MATH"></p>
+        
+        <script>
+            var Z=addition(8,6);
+            document.getElementById("MATH").innerHTML=Z;
+        </script>
+        <!--End addition-->
+
+        <!--subtraction-->
+        <p id="sub"></p>
+        <script>
+            var X=subtraction(9,5);
+            document.getElementById("sub").innerHTML=X;
+        </script>
+        <!--end subtraction-->
+
+        <!--Multiplication-->
+        <p id="multi"></p>
+        <script>
+            var Y=multiplication(5, 4);
+            document.getElementById("multi").innerHTML=Y;
+        </script>
+        <!--Multiplication-->
+
+         <!--Multiple operation-->
+
+        <p id="multiple"></p>
+        <script>
+            var T=multiple(5,4,3,2);
+            document.getElementById("multiple").innerHTML=T;
+        </script>
+        <!--end Multiple operation-->
+
+        <!--Modulus operation-->
+        <p id="modu"></p>
+        <script>
+            var V=modulus(25,6);
+            document.getElementById("modu").innerHTML=" When we divide 25 with 6, we get the modulus of:" +V;
+        </script>
+        <!--end Multiple operation-->
+
+        <!--negation operator-->
+        <p id="neg"></p>
+        <script>
+            var N=negation_Operator(12);
+            document.getElementById("neg").innerHTML=-N;
+        </script>
+        <!--end negation operator-->
+        <!--Math Object-->
+        <p id="sqrt"></p>
+        <script>
+            document.getElementById("sqrt").innerHTML= Math.sqrt(64);
+        </script>
+        <!--math object method ends-->
+    </body>
+</html>
