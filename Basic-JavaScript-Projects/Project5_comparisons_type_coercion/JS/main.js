@@ -1,12 +1,14 @@
 
-//typeof
-document.getElementById("text5").innerHTML=Jeff;
- Jeff= typeof "word";
-document.write(Jeff);
-
+//typeof 
+document.write(typeof "word");
+document.write("<br>");
 document.write(typeof 3);
+document.write("<br>");
+document.write(typeof "10" + 5);
+document.write("<br>");
 
-document.write("10"+ 5);
+
+
 
 //NaN
 function my_function(){
@@ -17,13 +19,17 @@ function my_function(){
 
 //Infinity
 document.write(2E310);
+document.write("<br>");
 
 document.write(-2E310);
+document.write("<br>");
 
 //Boolean
 document.write(5>2);
+document.write("<br>");
 
 document.write(4<3);
+document.write("<br>");
 
 //console
 console.log(4*2);
@@ -34,21 +40,27 @@ console.log(8<5);
 
 //==
 document.write(2+4==6);
+document.write("<br>");
 document.write(2-4==6);
+document.write("<br>");
 
 //===
 X=5;
 Y=5;
 document.write(X===Y);
+document.write("<br>");
 
 M=9;
 T="Nine";
 document.write(M===T);
+document.write("<br>");
 
 //Logical Operator
 document.write(8>5 && 9>7);
+document.write("<br>");
 
 document.write(8<5 || 9<7);
+document.write("<br>");
 
 //Not operator
 function not_function(){
