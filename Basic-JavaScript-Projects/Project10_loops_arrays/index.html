@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Project 10</title>
+        <meta charset="utf-8">
+        <script src="JS/main.js"></script>
+    </head>
+    <body>
+        <!--While-->
+        <button onclick="my_loop()">Click here to count</button>
+        <p id="loop"></p>
+
+        <!--String length-->
+        <p id="len"></p>
+        <script>
+            let str="Hello World!";
+            document.getElementById("len").innerHTML= str.length;
+        </script>
+
+        <!--For loop-->
+        <button onclick="for_loop()">Click</button>
+        <p id="inst"></p>
+        
+        <!--Array-->
+        <p id="array" onclick="array_func()">Click</p>
+
+        <!--using constant-->
+        <p id="constant" onclick="const_func()">Click</p>
+
+        <!--Return-->
+        <p id="return"></p>
+        <script>
+            var x= my_return (5 ,6);
+
+            function my_return(a , b){
+                return a * b;
+            }
+        document.getElementById("return").innerHTML=x;
+        </script>
+
+        <!--Object-->
+        <p id="obj"></p>
+        <script>
+            let car={
+            make:"Dodge",
+            model:"Viper",
+            year:"2021",
+            color:"Black",
+            description: function(){
+                return "This car is a"+ " "+this.make+ " "+ this.model+ " "+ "and" + " "+this.color+ " "+"colored";
+            } 
+
+        };
+        document.getElementById("obj").innerHTML=car.description();
+        </script>
+
+        <!--Break and Continue-->
+        <p id="break"></p>
+        <script>
+            let text="";
+            for (i=0;i<11;i++){
+            if(i===3){break;}
+            text+="The numbers is"+i +"<br>";
+            }
+        document.getElementById("break").innerHTML=text;
+        </script>
+
+        <p id="continue"></p>
+        <script>
+            let text1="";
+            for(x=0;x<11;x++){
+                if(x===3){continue;}
+                text1+="The number is"+ x+ "<br>";
+            }
+            document.getElementById("continue").innerHTML=text1;
+        </script>
+
+
+    </body>
+</html>
