@@ -58,6 +58,25 @@ function const_func(){
 //Same problem happened. Had to write code under HTML <script>.
 //Double checked script src.
 
+let car={
+    make:"Dodge",
+    model:"Viper",
+    year:"2021",
+    color:"Black",
+    description: function(){
+        return "This car is a"+ " "+this.make+ " "+ this.model+ " "+ "and" + " "+this.color+ " "+"colored";
+    } 
+
+};
+document.getElementById("obj").innerHTML=car.description();
+
 
 //Break and continue
 //Same thing happed here.
+
+let text1="";
+for(x=0;x<11;x++){
+    if(x===3){continue;}
+    text1+="The number is"+ x+ "<br>";
+}
+document.getElementById("continue").innerHTML=text1;

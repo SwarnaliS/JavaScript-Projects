@@ -6,6 +6,24 @@
 </head>
 <html>
     <body>
-        
+        <p id="demo">Click here to display date</p>
+        <button onclick="displayDate()">The date is</button>
+        <script>
+            function displayDate(){
+               document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
+    <!--defer-->
+        <p id="defer" onclick="my_function()">Click here</p>
+
+    <!--troubleshoot using DEVtool-->
+    <script>
+        X="You are" + " ";
+        Y="a cute boy Tintin"+"";
+        document.write(X+Y);
+        M="There is" + " ";
+        N="the restaurent";
+        document.write(M+N);
+    </script>
     </body>
 </html>

@@ -23,3 +23,10 @@ document.write(blue);
 
 document.write(3+3);
 //checking how to write comment
+
+//Defer
+function my_function(){
+    if(5>3){
+        document.getElementById("defer").innerHTML="five is greater than three";
+    }
+}
