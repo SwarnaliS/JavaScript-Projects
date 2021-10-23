@@ -47,7 +47,7 @@ function checkWinningConditions(){
     else if (arrayIncludes('1X','4X','7X')){drawWinLine(304,50,304,558)}
     else if (arrayIncludes('2X','5X','8X')){drawWinLine(508,50,508,558)}
     else if (arrayIncludes('6X','4X','2X')){drawWinLine(100,508,510,90)}
-    else if (arrayIncludes('0X','4X','8X')){drawLine(100,100,520,520)}
+    else if (arrayIncludes('0X','4X','8X')){drawWinLine(100,100,520,520)}
 
     else if (arrayIncludes('0O','1O','2O')){drawWinLine(50,100,558,100)}
     else if (arrayIncludes('3O','4O','5O')){drawWinLine(50,304,558,304)}
@@ -77,7 +77,7 @@ function disableClick(){
 }
 
 function audio(audioURL){
-    let audio=new Audio('./Media/place.mp3');
+    let audio=new Audio(audioURL);
     audio.play();
 }
 
@@ -130,7 +130,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2 ){
 function resetGame(){
     for (let i=0; i<9; i++ ){
         let square=document.getElementById(String(i));
-        square.style.backgroundImage=" ";
+        square.style.backgroundImage="";
     }
     selectedSquares=[];
 }
