@@ -1,7 +1,7 @@
 let activePlayer="X";
 let selectedSquares=[];
 function placeXOrO(squareNumber){
-    if(!selectedSquares.some(element=> element.include(squareNumber))){
+    if(!selectedSquares.some(element=> element.includes(squareNumber))){
         let select=document.getElementById(squareNumber);
         if (activePlayer==="X"){
         select.style.backgroundImage='url("./Images/x.png")';
@@ -20,7 +20,7 @@ function placeXOrO(squareNumber){
         audio('./Media/place.mp3');
 
         if(activePlayer==="O"){
-            disableClick();
+        disableClick();
         setTimeout(function(){computersTurn();},1000);
         }
         return true;
@@ -31,7 +31,7 @@ function placeXOrO(squareNumber){
         while(!success){
             pickASquare=String (Math.floor (Math.random()*9));
             if (placeXOrO(pickASquare)){
-                placeXOrO=pickASquare;
+                placeXOrO(pickASquare);
                 success=true;
             }
         }
@@ -72,12 +72,12 @@ function checkWinningConditions(){
 }   
 
 function disableClick(){
-    body.style.pointerEvents="none";
-    setTimeout (function(){body.style.pointerEvents="auto";},1000);
+    body.style.pointerEvents='none';
+    setTimeout (function(){body.style.pointerEvents='auto';},1000);
 }
 
-function audio(){
-    let audio=new Audio(audioURL);
+function audio(audioURL){
+    let audio=new Audio('./Media/place.mp3');
     audio.play();
 }
 
@@ -90,9 +90,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2 ){
         y2=coordY2,
         x=x1,
         y=y1;
-}
-
-function animateLineDrawing(){
+    function animateLineDrawing(){
     const animationLoop=requestAnimationFrame(animateLineDrawing);
     c.clearRect(0,0,608,608);
     c.beginPath();
@@ -112,19 +110,22 @@ function animateLineDrawing(){
         if(y > y2){y-=10;}
         if(x >= x2 && y <= y2){cancelAnimationFrame(animationLoop);}
     }
+    }
 
-
-function clear(){
-    const animationLoop=requestAnimationFrame(clear);
-    c.clearRect(0,0,608,608);
-    cancelAnimationFrame(animationLoop);
+    function clear(){
+        const animationLoop=requestAnimationFrame(clear);
+        c.clearRect(0,0,608,608);
+        cancelAnimationFrame(animationLoop);
+    }
+    
+    disableClick();
+    audio('./Media/winGame.mp3');
+    animateLineDrawing();
+    setTimeout (function(){clear(); resetGame();},1000);
+    
 }
 
-disableClick();
-audio('./Media/winGame.mp3');
-animateLineDrawing();
-setTimeout (function(){clear(); resetGame();},1000);
-}
+
 
 function resetGame(){
     for (let i=0; i<9; i++ ){
