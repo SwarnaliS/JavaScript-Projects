@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery</title>
+        <meta charset="utf-8">
+        <!--Adding JQuery to the code-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    
+    <script>
+        //telling  jquery to change the html document when it is ready to call the function
+        $(document).ready(function(){
+            //targeting to change the html to append followings
+            $("html").append(
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Practicing JQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            //targeting paragraph by id to change color
+            $("#3").css({"color":"Blue"});
+            //using event and Effect
+            $("#1").click(function(){
+                $("h1").hide();
+            });
+        });
+    </script>
+    
+</html>
