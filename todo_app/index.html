@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo-App</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="./CSS/todo.css">
+    </head>
+    <body>
+        <!--todo-->
+        <input id="task">
+        <button id="add">Add Item</button>
+        <div id="todos"></div>
+
+        <!--Double click event-->
+        <p id="dbl" ondblclick="myFunc()">double click here:</p>
+        <script>
+            function myFunc(){
+                document.getElementById("dbl").style.color="blue";
+            }
+        </script>
+        
+
+
+
+    <script src="JS/todo.js"></script>
+
+    <footer> &copy; Swarnali | 2021</footer>
+    </body>
+</html>
